@@ -26,7 +26,9 @@ function App(props) {
             <Route path={path.home} render=
                 {() => <HomePage state={state}/>}/>
             <Route path={path.feedbacks} render=
-                {() => <FeedbackPage state={state}/>}/>
+                {() => <FeedbackPage state={state}
+                                     dispatch={props.dispatch}
+                                     newMessageText={state.feedbacks.newMessageText}/>}/>
             <Route path={path.contacts} render=
                 {() => <ContactPage state={state}/>}/>
             <Footer />
